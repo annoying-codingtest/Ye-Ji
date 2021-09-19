@@ -14,6 +14,8 @@ public class HanoiTest //백준제출 할 때 Main으로
 
         Hanoi(n, 1, 2, 3);
         System.out.println(sb);
+
+        scan.close();
         
     }
     public static void Hanoi(int n, int s, int m, int t) //n : 원판 갯수 , s : 시작 , m : 중간 , t : 목적지
@@ -34,6 +36,7 @@ public class HanoiTest //백준제출 할 때 Main으로
 
         //B -> C로 n - 1 개 옮기기
         Hanoi(n - 1, m, s, t);
+    
     }
     
 }
