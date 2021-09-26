@@ -14,7 +14,7 @@ public class SortNumber03 {
         {
             list[i] = Integer.parseInt(bf.readLine());
         }
-       Arrays.sort(list);
+       Arrays.sort(list); //좋지 않은 성능이 될 수도 있음
 		
         for(int i : list){
           s.append(i).append('\n');
