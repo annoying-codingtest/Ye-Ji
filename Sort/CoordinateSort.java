@@ -14,14 +14,14 @@ public class CoordinateSort{
         }
 
      
-        Arrays.sort(c, new Comparator<int[]>(){
+        Arrays.sort(c, new Comparator<int[]>(){ //Comparator 인터페이스 재정의
             @Override
             public int compare(int[] c1, int[] c2){
-                if(c1[0] == c2[0]){
-                    return c1[1] - c2[1];
+                if(c1[0] == c2[0]){   //x좌표 값이 같다면 y좌표 기준으로 정렬
+                    return c1[1] - c2[1]; //c1이 다음 행이므로 다음행의 y좌표가 기준 c2행의 y좌표보다 작으면 -1 리턴 -> 두 행의 위치를 바꿈
                 }
                 else{
-                    return c1[0] - c2[0];
+                    return c1[0] - c2[0]; //나머지 x좌표 기준 정렬
                 }
             }
         });
