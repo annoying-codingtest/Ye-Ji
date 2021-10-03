@@ -1,4 +1,5 @@
 import java.util.*;
+//중복방문 고려할 필요 없어서 
 
 public class NnM2 {
     public static int[] arr;
