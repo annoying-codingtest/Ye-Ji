@@ -49,17 +49,17 @@ public class Statistics {
             maxFreq = freq[i];
         }
             
-        boolean twice = false; // 두 번째를 구별하기 위한 변수 
+        boolean twice = false; // 두 번째를 구별하기 위한 변수 중복될때 한번 확인 . false 최빈값이 3이 최빈이면 0번째 3 1번째 3 2번째 3
         
         for (int i=0; i<8001; i++)
         { 
-            if (freq[i] == maxFreq) { // 최빈값이면 
+            if (freq[i] == maxFreq) { // 최빈값이면  몇번나왔냐가 freq 값들의 빈출 횟수 i 값 모드 
                 if (twice){
                     maxIndex = i - 4000;
                     break; 
                 } 
                 maxIndex = i - 4000;
-                twice = true; // 플래그 세우기
+                twice = true; // 플래그 세우기 true 바꿔주면 반복된거 3번째 나오면 실행을 안한다.
             } 
         } 
         
