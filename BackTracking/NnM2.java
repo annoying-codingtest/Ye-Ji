@@ -1,5 +1,5 @@
 import java.util.*;
-//중복방문 고려할 필요 없어서 
+//중복방문 고려할 필요 없어서 visit x
 
 public class NnM2 {
     public static int[] arr;
@@ -12,7 +12,6 @@ public class NnM2 {
         m = scan.nextInt();
 
         arr = new int[m];
-
 
         dfs(1, 0);
 
