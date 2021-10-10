@@ -1,3 +1,5 @@
+//이해 X
+
 import java.util.*;
 public class StartNLink {
     static int N;
@@ -20,7 +22,7 @@ public class StartNLink {
         }
         combi(0, 0);
         System.out.println(MIN);
-        
+
         scan.close();
     }
     //w는 인덱스, count는 조합 개수(=재귀 깊이)
