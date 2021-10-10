@@ -1,4 +1,4 @@
-//이해 X
+//x
 
 import java.util.*;
 public class StartNLink {
