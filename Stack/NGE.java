@@ -27,8 +27,8 @@ public class NGE {
             if(stack.isEmpty()){
                 stack.push(i);  //스택이 비어있으면 인덱스 푸쉬
             }
-            while(stack.size() != 0 && dt[stack.peek()] < dt[i]){
-                result[stack.pop()] = dt[i];
+            while(stack.size() != 0 && dt[stack.peek()] < dt[i]){ //비어있지 않고 숫자가 인덱스 가장 위쪽 숫자보다 크면
+                result[stack.pop()] = dt[i];//결과 배열 중 가장 위쪽 숫자와 같은 인덱스에 i번째 숫자
             }
             stack.push(i); //다음에 비교할 숫자 스택에
         }
