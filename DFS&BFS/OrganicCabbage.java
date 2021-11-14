@@ -1,11 +1,11 @@
 import java.util.*;
 import java.io.*;
 public class OrganicCabbage {
-        static int M, N, K;
+        static int M, N, K; //가로 세로 위치의 개수
         static int[][] cabbage;
         static boolean[][] visit;
         static int count;
-        static int[] dx = { 0, -1, 0, 1 };
+        static int[] dx = { 0, -1, 0, 1 }; //상하좌우
         static int[] dy = { 1, 0, -1, 0 };
     
         static void dfs(int x, int y) {
@@ -31,14 +31,16 @@ public class OrganicCabbage {
             int tc = Integer.parseInt(br.readLine());
     
             for (int i = 0; i < tc; i++) {
-                count = 0;
+                count = 0; //구역수
                 StringTokenizer st = new StringTokenizer(br.readLine(), " ");
                 M = Integer.parseInt(st.nextToken());
                 N = Integer.parseInt(st.nextToken());
-                cabbage = new int[M][N];
-                visit = new boolean[M][N];
+                cabbage = new int[M][N]; //배추밭
+                visit = new boolean[M][N]; //방문 체크
     
                 K = Integer.parseInt(st.nextToken());
+               
+                //배추밭에 배추 심어져 있는 곳 입력. 
                 for (int j = 0; j < K; j++) {
                     st = new StringTokenizer(br.readLine(), " ");
                     int p1 = Integer.parseInt(st.nextToken());
@@ -46,8 +48,10 @@ public class OrganicCabbage {
                     cabbage[p1][p2] = 1;
                 }
     
+                //배추 있으면 dfs 탐색 , 구역수 증가
                 for (int x = 0; x < M; x++) {
                     for (int y = 0; y < N; y++) {
+                        //배추 있는데 방문 안했으면 탐색, 구역 수 증가 
                         if (cabbage[x][y] == 1 && !visit[x][y]) {
                             dfs(x, y);
                             count++;
