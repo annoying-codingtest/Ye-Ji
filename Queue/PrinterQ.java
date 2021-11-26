@@ -23,9 +23,6 @@ public class PrinterQ {
             queue.add(i);
         }
 
-        
-
-
     }
     
 }
