@@ -22,6 +22,5 @@ public class Coin1 {
             }
         }
         System.out.println(dp[k]);
-
     }
 }
