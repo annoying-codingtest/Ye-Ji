@@ -1,7 +1,6 @@
 package BinarySearch;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
  
 public class NumberCard22 {
  
