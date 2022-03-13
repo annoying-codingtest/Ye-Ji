@@ -13,7 +13,6 @@ public class StackSequence {
 
         while (num-- > 0)
         {
-           
             int input = Integer.parseInt(br.readLine());  //수 입력 받고.
             
             if(input > last){
@@ -26,7 +25,7 @@ public class StackSequence {
             else if(stack.peek() != input){
                 System.out.println("NO");
                 return;
-             }
+            }
         stack.pop();
         sb.append("-\n");
     }    
