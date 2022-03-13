@@ -23,7 +23,6 @@ public class Lan {
 		
 		for (int i = 0; i < K; i++) {
 			arr[i] = Integer.parseInt(br.readLine());
-			
 		}
 		
 
